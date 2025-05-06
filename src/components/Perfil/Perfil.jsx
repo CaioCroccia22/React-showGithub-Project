@@ -1,4 +1,5 @@
-import './perfil.css'
+
+import styles from './Perfil.module.css';
 
 export default (props) => {
     // Desestruturação da props
@@ -6,7 +7,7 @@ export default (props) => {
    
     return (
          /* Apartir disso conseguimos converter o objeto em uma string */
-        <header>
+        <header className={styles.header}>
 
             <img className="perfil-avatar" src={`https://github.com/${nomeUsuario}.png`} />
             <h1 className="perfil-titulo">
