@@ -1,0 +1,32 @@
+import { useState, useEffect } from "react";
+
+const ReposList = () => {
+
+    const [repos, setRepos] = useState([]);
+
+    useEffect(() => {
+        fetch('https://api.github.com/users/caiocroccia22/repos')
+        .then(res => res.json())
+        .then(resJson => {
+            setRepos(resJson)
+            console.log(resJson);
+        })
+    }, []);
+
+    return(
+        <ul>
+            {repos.map(repositorio => (
+                <li key={repositorio.id}>
+                    <b>Nome: </b>{repositorio.name} <br />
+                    <b>Linguagem: </b>{repositorio.language} <br />
+                    <a target="_blank" href={repositorio.html_url}>Visitar no github</a><br />
+                </li>
+            ))}
+            <li>
+                Repositório
+            </li>
+        </ul>
+    )
+}
+
+export default ReposList
