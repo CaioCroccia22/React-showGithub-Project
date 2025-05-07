@@ -9,8 +9,8 @@ export default (props) => {
          /* Apartir disso conseguimos converter o objeto em uma string */
         <header className={styles.header}>
 
-            <img className="perfil-avatar" src={`https://github.com/${nomeUsuario}.png`} />
-            <h1 className="perfil-titulo">
+            <img className={styles.avatar} src={`https://github.com/${nomeUsuario}.png`} />
+            <h1 className={styles.name}>
                 Nome do usuário: {nomeUsuario}
             </h1>
         </header>
