@@ -2,16 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+
+body{
     background-color: var(--corPrincipal);
 }
 
+
+
 .container{
-    max-width: 960px;
-    width: 100%;
+    width: 100vw;
     margin: 0 auto;
+    /* background-color: red; */
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 :root{
     --corPrincipal: #2b2b2b;
     --corSecundaria: #111;
 }
+

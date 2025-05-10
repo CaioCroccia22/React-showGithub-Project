@@ -1,4 +1,35 @@
+.header{
+    height: 15vh;
+}
+
 .itemLink a{
     color: #ffffff;
     text-decoration: none;
+}
+
+.nav{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 50px 0px 50px;
+}
+
+.navList{
+    list-style: none;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.title{
+    color: #fff;
+    font-size: 24px;
+}
+
+.btn{
+    background-color: #BFAFF2;
+    color: #fff;
 }
