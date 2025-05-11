@@ -19,14 +19,14 @@ function App() {
   <>
     <Title />
     <div className="container">
-      <div className="content-mensage">
+      <div className={`${styles.contentMensage}`}>
         <h2 className={`${styles.secondaryTitle}`}>
-          Digite o seu usuário do Github
+          Encotre seus repositórios do GitHub aqui:
         </h2>
-        <input className={`${styles.contentInput}`} type="text" onBlur={(e) => setNomeUsuario(e.target.value)} />
+        <input className={`${styles.contentInput}`} type="text" onBlur={(e) => setNomeUsuario(e.target.value)} placeholder="Insira seu usuário do Github aqui"/>
       </div>
       <div className={`${styles.contentProfile}`}>
-        <Perfil className={`${styles.Profile}`} nomeUsuario={nomeUsuario} />
+        <Perfil nomeUsuario={nomeUsuario} />
       </div>
     </div>
     {/* Esses atributos passados como string são acessados dentro dos componentes */}

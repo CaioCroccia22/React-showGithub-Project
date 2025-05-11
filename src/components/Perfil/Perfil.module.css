@@ -1,10 +1,12 @@
-.header{
-    background-color: var(--corPrincipal);
+.profileContent{
+    background-color: #333333;
+    width: 35vw;
+    height: 65vh;
+    border-radius: 6px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 180px 0 40px;
-    margin-bottom: 80px;
+    flex-direction: column;
 
 }
 
@@ -19,4 +21,9 @@
 .name{
     font-size: 18px;
     margin-top: 20px;
+    color: #fff;
 }
+
+
+
+/* #333333 */

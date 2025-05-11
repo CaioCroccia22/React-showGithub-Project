@@ -1,15 +1,42 @@
-.contentProfile{
-    background-color: #333333;
+
+
+.contentMensage{
+    /* background-color: red; */
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
-.Profile{
-    background-color: #333333;
-}
 
 .secondaryTitle {
-    font-size: 20px;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
     color: #fff;
   }
 
+.contentInput{
+    width: 60%;
+    height: 5vh;
+    border: none;
+    border-radius: 6px;
+    background-color: #333333;
+    color: #fff;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    box-shadow: inset 4px 4px 8px #252525, inset -4px -4px 8px #262626;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+    text-align: center;
 
+}
 
+.contentInput:focus {
+    background-color: #333333;
+    box-shadow: inset 2px 2px 5px #191818, inset -2px -2px 5px #1b1a1a;
+    transform: translateY(2px);
+    border: none;
+  }

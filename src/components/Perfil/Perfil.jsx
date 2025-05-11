@@ -1,5 +1,9 @@
 
 import styles from './Perfil.module.css';
+// React
+import { motion } from "motion/react"
+
+
 
 export default (props) => {
     // Desestruturação da props
@@ -7,37 +11,29 @@ export default (props) => {
    
     return (
          /* Apartir disso conseguimos converter o objeto em uma string */
-        <header className={styles.header}>
+        <div className={styles.profileContent}>
 
-            <img className={styles.avatar} src={`https://github.com/${nomeUsuario}.png`} />
+            <motion.img
+                alt="Avatar"
+                style={{ width: 200, borderRadius: '50%' }}
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                src={`https://github.com/${nomeUsuario}.png`}
+            />
+            
+
             <h1 className={styles.name}>
                 Nome do usuário: {nomeUsuario}
             </h1>
-        </header>
-    ) 
-
-}
-
-/*
--- Ou
-
-const Perfil = () => {
-
-    const usuario = {
-        nome: 'Caio Croccia',
-        avatar: 'https://github.com/caiocroccia22.png'
-    }
-
-
-    return (
-        <div>
-            <img className="perfil-avatar" src={usuario.avatar} />
-            <h3 className="perfil-titulo">{usuario.nome}</h3>
         </div>
     ) 
+
 }
 
 
-export default Perfil
-
-*/
+const box = {
+    width: 100,
+    height: 100,
+    backgroundColor: "#9911ff",
+    borderRadius: 5,
+}

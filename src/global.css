@@ -13,9 +13,9 @@ body{
 
 .container{
     width: 100vw;
-    margin: 0 auto;
-    /* background-color: red; */
-    border: 1px solid gray;
+    height: 80vh;
+    margin: 0 100px 0px 100px;
+    /* border: 1px solid gray; */
     display: flex;
     align-items: center;
     justify-content: space-between;
