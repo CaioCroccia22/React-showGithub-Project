@@ -15,32 +15,33 @@ const ReposList = ({ nomeUsuario }) => {
                 setDownload(true)
                 setRepos(resJson)
 
-            }, 30000)
+            }, 3000)
         })
     }, [nomeUsuario]);
 
-    return(
-        <div className="contaniner">
-            {download === false && (
-                <h1>Carregando...</h1>
-            )}
-            <ul className={styles.list}>
-                {repos.map(repositorio => (
+    return (
+        <div className={`${styles.reposContent}`}>
+            {!download && <h1>Carregando...</h1>}
+
+
+            <ul className={`${styles.list}`} >
+                {repos.map(repositorio => ( 
                     <li className={styles.listItem} key={repositorio.id}>
-                        <div className={styles.itemName}>
-                            <b>Nome: </b>{repositorio.name} <br />
-                        </div>
-                        <div className={styles.itemLanguage}>
-                            <b>Linguagem: </b>{repositorio.language} <br />
-                        </div>
-                        <div className={styles.itemLink}>
-                            <a target="_blank" href={repositorio.html_url}>Visitar no github</a>
+                        <div className={`card ${styles.card}`} >
+                            <div className={`card-body ${styles.cardBody}`} >
+                                <h5 className={`card-title ${styles.itemName}`} >Nome: {repositorio.name}</h5>
+                                <h5 className={`card-title ${styles.itemLanguage}`}> Linguagem: {repositorio.language}</h5>
+                                {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p> */}
+                                <div className={styles.itemLink}>
+                                    <a target="_blank" rel="noreferrer" href={repositorio.html_url}>Visitar no GitHub</a>
+                                </div>
+                            </div>
                         </div>
                     </li>
                 ))}
             </ul>
         </div>
-    )
-}
+    );
+};
 
 export default ReposList

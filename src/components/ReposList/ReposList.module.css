@@ -1,39 +1,61 @@
+
+
 .list{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center; /* centraliza horizontal e vertical */
     grid-gap: 16px;
 }
 
 .listItem{
     list-style: none;
     padding: 16px;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: none;
 }
 
 
 .itemName{
-
+    font-size: 18px;
+    width: 100%;
 }
 
 .itemLanguage{
+    font-size: 16px;
 
 }
 
 .itemName b, .itemLanguage b{
-    margin-right: 8px;
+    margin-right: 8px; 
+}
+
+.card{
+    background-color: #BFAFF2;
+    color: #2B2B47;
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 3fr;
+    grid-row-gap: 16px;
+
 }
 
 .itemLink{
     display: block;
-    background-color: var(--corPrincipal);
+    background-color: #2B2B47;
+    color: #fff;
     text-align: center;
     font-weight: bold;
     margin-top: 8px;
     padding: 8px;
+    border-radius: 8px;
 }
 
 .itemLink a{
     text-decoration: none;
     text-decoration-style: none;
-    color: var(--corSecundaria);
+    color: #fff;
 }

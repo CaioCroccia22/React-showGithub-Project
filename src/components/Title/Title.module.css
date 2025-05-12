@@ -2,10 +2,6 @@
     height: 8vh;
 }
 
-.itemLink a{
-    color: #ffffff;
-    text-decoration: none;
-}
 
 .nav{
     display: flex;
@@ -18,7 +14,7 @@
 .navList{
     list-style: none;
     display: flex;
-    width: 40%;
+    width: 50%;
     justify-content: space-between;
     text-align: center;
     align-items: center;
@@ -29,7 +25,39 @@
     font-size: 24px;
 }
 
-.btn{
+.btnLink{
     background-color: #BFAFF2;
-    color: #fff;
+     /* #2B2B47; */
+    color: #2B2B47;
+    font-size: 20px;
+    width: 175px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    
 }
+
+.btnLink a{
+    text-decoration: none;
+    color: inherit; /* opcional, para herdar a cor do texto pai */
+}
+
+
+.btnLink:hover{
+    background-color: #2B2B47;
+    color: #fff;
+    width: 175px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+}
+
+
+.linkActive a{
+    text-decoration: none;
+    color: inherit; /* opcional, para herdar a cor do texto pai */
+}
+
+
+
+
